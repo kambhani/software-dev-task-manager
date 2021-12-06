@@ -1,0 +1,62 @@
+/* This is the standard styling that comes with Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  /* This class creates the modal fade in effect */
+  .modal-fade-in {
+    animation: modalFadeIn 0.5s ease-out -0.2s;
+    -webkit-animation: modalFadeIn 0.5s ease-out -0.2s;
+  }
+
+  @keyframes modalFadeIn {
+    from {
+      top: -320px;
+      opacity: 0;
+    }
+    to {
+      top: 0;
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes modalFadeIn {
+    from {
+      top: -320px;
+      opacity: 0;
+    }
+    to {
+      top: 0;
+      opacity: 1;
+    }
+  }
+
+  /* This class creates the modal fade out effect */
+  .modal-fade-out {
+    animation: modalFadeOut 0.3s ease-out;
+    -webkit-animation: modalFadeOut 0.3s ease-out;
+  }
+
+  @keyframes modalFadeOut {
+    from {
+      top: 0px;
+      opacity: 1;
+    }
+    to {
+      top: -320px;
+      opacity: 0;
+    }
+  }
+
+  @-webkit-keyframes modalFadeOut {
+    from {
+      top: 0;
+      opacity: 1;
+    }
+    to {
+      top: -320px;
+      opacity: 0;
+    }
+  }
+}
